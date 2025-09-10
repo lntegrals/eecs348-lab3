@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Practice 3 — Password Verify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding:24px; background:#0b1220; color:#e5e7eb; }
+    .box { max-width:480px; border:1px solid #334155; border-radius:12px; padding:20px; background:#111827; }
+    label { display:block; margin:.5rem 0 .25rem; }
+    input { width:100%; padding:10px; border-radius:8px; border:1px solid #334155; background:#0b1220; color:#e5e7eb; }
+    button { margin-top:12px; padding:10px 14px; border-radius:10px; border:1px solid #334155; background:#0b1220; color:#e5e7eb; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>Practice 3 — Password Verification</h1>
+  <div class="box">
+    <label for="p1">Enter password</label>
+    <input id="p1" type="password" />
+    <label for="p2">Re-enter password</label>
+    <input id="p2" type="password" />
+    <button id="check">Verify</button>
+  </div>
+  <script>
+    document.getElementById('check').addEventListener('click', () => {
+      const p1 = document.getElementById('p1').value;
+      const p2 = document.getElementById('p2').value;
+      if (p1.length < 8 || p2.length < 8) {
+        alert('Error: Password must be at least 8 characters.');
+        return;
+      }
+      if (p1 !== p2) {
+        alert('Error: Passwords do not match.');
+        return;
+      }
+      alert('Success: Passwords match!');
+    });
+  </script>
+</body>
+</html>

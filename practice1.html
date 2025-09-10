@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Practice 1 — Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --ink:#e5e7eb; --accent:#60a5fa; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--ink); }
+    .wrap { max-width:900px; margin:40px auto; padding:24px; }
+    .card { background:var(--card); border:1px solid #1f2937; border-radius:16px; padding:24px; box-shadow:0 8px 24px rgba(0,0,0,.25); }
+    h1 { margin:0 0 8px; font-size:2rem; }
+    p { line-height:1.6; }
+    .row { display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+    img { width:220px; height:220px; object-fit:cover; border-radius:12px; border:2px solid #374151; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Hi, I’m <em>Your Name</em> 👋</h1>
+      <div class="row">
+        <img src="profile.jpg" alt="My photo">
+        <div>
+          <p>
+            I’m a CS student who loves web development and building clean UIs.
+            In my free time I lift, tutor math, and hack on AI tools.
+          </p>
+          <p>
+            Here’s a site I like:
+            <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a>.
+          </p>
+        </div>
+      </div>
+      <h2>Favorite Video</h2>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>
